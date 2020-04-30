@@ -9,20 +9,17 @@
 <ion-content padding>
 
   <ion-list>
-    
-    <ion-item>
-      <ion-item>
+      <ion-item *ngFor='let chat of chatRooms' (click)='openChat(chat)'>
         <ion-avatar slot='start'>
-          <ion-img src='https://picsum.photos/seed/picsum/200/300'></ion-img>
+          <ion-img [src]='chat.img'></ion-img>
         </ion-avatar>
         <ion-label>
-          <h2><b>Chat de grupo</b></h2>
-          <h3>Esto es un chat grupal</h3>
-          <p>Accede dando click</p>
+          <h2><b>{{chat.name}}</b></h2>
+          <p>{{chat.descripcion}}</p>
         </ion-label>
       </ion-item>
-    </ion-item>
-      
+    
+  
   </ion-list>
 
   
