@@ -17,6 +17,16 @@
   </ion-item>
 
   <ion-item>
+    <ion-label position="floating">Edad</ion-label>
+    <ion-input type="text" [(ngModel)]='edad' name="edad"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Sexo</ion-label>
+    <ion-input type="text" [(ngModel)]='sexo' name="sexo"></ion-input>
+  </ion-item>
+
+  <ion-item>
     <ion-label position="floating">Contraseña</ion-label>
     <ion-input type="password" [(ngModel)]='password' name="password"></ion-input>
   </ion-item>
@@ -24,5 +34,6 @@
   <br>
   <ion-button expand="block" color='secondary' (click)='OnSubmitRegister()'>Registrarse</ion-button>
   <br>
-  <p text='center' routerLink='/login'>Volver</p>
+  <ion-button color='secondary' routerLink='/login' expand="block">Volver</ion-button>
+
 </ion-content>
