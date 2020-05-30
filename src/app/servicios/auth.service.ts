@@ -15,7 +15,6 @@ export class AuthService {
   constructor(private AFauth : AngularFireAuth, private router : Router, private db : AngularFirestore) { }
 
   login(email:string, password:string){
-
     return new Promise((resolve, rejected) =>{
       this.AFauth.signInWithEmailAndPassword(email, password).then(user => {
         resolve(user);

@@ -28,6 +28,13 @@ export class ChatsService {
     }))
   }
 
+  getUsers(){
+    return this.db.collection('users').snapshotChanges()
+     
+  }
+
+
+
   getChatRoom( chat_id : string){
     return this.db.collection('chatrooms').doc(chat_id).valueChanges()
   }
